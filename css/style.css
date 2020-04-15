@@ -14,6 +14,57 @@ body {
   overflow: hidden;
   width: 100vw;
   min-height: 100vh;
+  background-color: white;
+  -webkit-transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  overflow: hidden;
+  z-index: 999999;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.wrapper .loader {
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50% 70% 50% 70% / 70% 70% 50% 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 999999;
+  -webkit-animation: deformRotate 10s linear infinite alternate;
+          animation: deformRotate 10s linear infinite alternate;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease-in;
+  transition: opacity 0.8s ease-in;
   background-color: #246b59;
 }
 
@@ -573,7 +624,7 @@ main section#amet .back:hover::before {
   -webkit-transition: width .1s ease-out;
   transition: width .1s ease-out;
   pointer-events: none;
-  z-index: 999999;
+  z-index: 99999;
   mix-blend-mode: overlay;
   -webkit-animation: deform 4s ease infinite alternate;
           animation: deform 4s ease infinite alternate;
@@ -591,6 +642,12 @@ main section#amet .back:hover::before {
   margin-right: 50px;
   font-style: italic;
   z-index: 999998;
+  cursor: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 @-webkit-keyframes deform {
@@ -607,6 +664,32 @@ main section#amet .back:hover::before {
     border-radius: 50% 70% 50% 70% / 70% 70% 50% 50%;
   }
   100% {
+    border-radius: 70% 50% 70% 50% / 50% 50% 70% 70%;
+  }
+}
+
+@-webkit-keyframes deformRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-radius: 50% 70% 50% 70% / 70% 70% 50% 50%;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-radius: 70% 50% 70% 50% / 50% 50% 70% 70%;
+  }
+}
+
+@keyframes deformRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-radius: 50% 70% 50% 70% / 70% 70% 50% 50%;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     border-radius: 70% 50% 70% 50% / 50% 50% 70% 70%;
   }
 }

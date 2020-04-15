@@ -1,34 +1,42 @@
-// let select = (selector) => {
-//     return document.querySelector(selector);
-//   };
-  
-//   let next = select("#next");
-//   let prev = select("#prev");
-  
-//   let tl = gsap
-//     .timeline({
-//       paused: true,
-//       defaults: { duration: 1, scale: 0, opacity: 0, ease: "power1.in" }
-//     })
-  
-//     .from(".b0", { scale: 1, opacity: 1 })
-//     .addPause()
-//     .to(".b0", { opacity: 0, xPercent: 100 })
-  
-//     .from(".b1", { rotation: -180, yPercent: -100,opacity: 0 })
-//     .addPause()
-//     .to(".b1", { opacity: 0, xPercent: 100 })
-  
-//     .from(".b2", { rotation: -180, yPercent: -100, opacity: 0 })
-//     .addPause()
-//     .to(".b2", { opacity: 0, xPercent: 100 })
-  
-//     .from(".b3", { rotation: -180, yPercent: -100, opacity: 0 });
-//   // .to(".b3", {opacity:0})
-  
-//   next.addEventListener("click", () => tl.play());
-//   prev.addEventListener("click", () => tl.reverse());
+// LOADING SCREEN
+const body = document.querySelector("body");
+const wrapper = document.querySelector(".wrapper");
+const main = document.querySelector("main");
 
+let tlLoader = gsap
+    .timeline({
+      paused: true,
+      defaults: { duration: 2 }
+    })
+    .fromTo(".wrapper .loader", {duration: 1,opacity:1}, {opacity:0})
+    .fromTo(".wrapper", {ease: "elastic(2, .1)",transformOrigin: "50% 0%", yPercent: 0,scale: 1,borderRadius: "0px"}, {yPercent: -100,scale: 0,borderRadius: "50%"}, "<.2")
+
+// LOADING
+function loading() {
+  setTimeout(() => {
+
+    tlLoader.play()
+
+    // wrapper.style.display = "none";
+    // wrapper.style.opacity = 0;
+
+    main.style.display = "block";
+    setTimeout(() => (main.style.opacity = 1), 50);  
+  }, 3000);
+}
+document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener(
+    "load",
+    function() {
+      setTimeout(() => {
+        loading();
+      }, 3000);
+    },
+    false
+  );
+});
+
+// GSAP ANIMATIONS
 gsap.to(".to-left", {x: -280, duration: 10, ease: "linear", yoyo:true, repeat: -1})
 gsap.to(".to-right", {x: 0, duration: 10, ease: "linear", yoyo:true, repeat: -1})
 
@@ -39,8 +47,6 @@ let select = (selector) => {
     return document.querySelector(selector);
   };
   
-
-
 
   // LOREM SECTION
   let loremLeft = select("#nav > p.to-left > span:nth-child(1)");
@@ -76,10 +82,10 @@ let select = (selector) => {
       }, "<.6")
 
 
-      // .to("#tracker", {
-      //   background:"hsl(226, 36%, 16%)",
-      //   opacity: 1
-      // }, "<.6")
+      .to("#tracker", {
+        background:"hsl(226, 36%, 16%)",
+        opacity: 1
+      }, "<.6")
 
     loremLeft.addEventListener("click", () => tlLorem.play());
     loremRight.addEventListener("click", () => tlLorem.play());
@@ -120,10 +126,10 @@ let select = (selector) => {
       }, "<.6")
 
 
-      // .to("#tracker", {
-      //   background:"hsl(81, 30%, 16%)",
-      //   opacity: 1
-      // }, "<.6")
+      .to("#tracker", {
+        background:"hsl(81, 30%, 16%)",
+        opacity: 1
+      }, "<.6")
 
     ipsumLeft.addEventListener("click", () => tlIpsum.play());
     ipsumRight.addEventListener("click", () => tlIpsum.play());
@@ -165,10 +171,10 @@ let select = (selector) => {
       }, "<.6")
 
 
-      // .to("#tracker", {
-      //   background:"hsl(268, 30%, 16%)",
-      //   opacity: 1
-      // }, "<.6")
+      .to("#tracker", {
+        background:"hsl(268, 30%, 16%)",
+        opacity: 1
+      }, "<.6")
 
     dolorLeft.addEventListener("click", () => tlDolor.play());
     dolorRight.addEventListener("click", () => tlDolor.play());
@@ -211,10 +217,10 @@ let select = (selector) => {
       }, "<.6")
 
 
-      // .to("#tracker", {
-      //   background:"hsl(15, 50%, 16%)",
-      //   opacity: 1
-      // }, "<.6")
+      .to("#tracker", {
+        background:"hsl(15, 50%, 16%)",
+        opacity: 1
+      }, "<.6")
 
     sitLeft.addEventListener("click", () => tlSit.play());
     sitRight.addEventListener("click", () => tlSit.play());
@@ -254,10 +260,10 @@ let select = (selector) => {
       }, "<.6")
 
 
-      // .to("#tracker", {
-      //   background:"hsl(34, 50%, 16%)",
-      //   opacity: 1
-      // }, "<.6")
+      .to("#tracker", {
+        background:"hsl(34, 50%, 16%)",
+        opacity: 1
+      }, "<.6")
 
     ametLeft.addEventListener("click", () => tlAmet.play());
     ametRight.addEventListener("click", () => tlAmet.play());

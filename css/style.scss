@@ -18,11 +18,51 @@ body {
     overflow: hidden;
     width: 100vw;
     min-height: 100vh;
-    background-color: hsl(165, 50%, 28%);
+    // background-color: hsl(165, 50%, 28%);
+    background-color: white;
+    transition: all 0.8s ease-in;
   }
 
+
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    overflow: hidden;
+    z-index: 999999;
+    transition: all 2s;
+    .loader {
+      background-color: black;
+      width: 150px;
+      height:150px;
+      border-radius: 50% 70% 50% 70% / 70% 70% 50% 50%;
+      position: absolute;
+      pointer-events: none;
+      z-index: 999999;
+      animation: deformRotate 10s linear infinite alternate;
+    }
+  
+    
+  }
+
+
   main {
-      
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    // display: none;
+    transition: opacity 0.8s ease-in;
+    background-color: hsl(165, 50%, 28%);
       section#nav {
         width: 100%;
         height: 100vh;
@@ -512,7 +552,7 @@ body {
     opacity: 1;
     transition: width .1s ease-out;
     pointer-events: none;
-    z-index: 999999;
+    z-index: 99999;
     mix-blend-mode: overlay;
     animation: deform 4s ease infinite alternate;
 }
@@ -528,11 +568,9 @@ body {
     margin-right: 50px;
     font-style: italic;
     z-index: 999998;
-
-    // &:hover ~ #tracker {
-    //     border-radius: 40% 70% 40% 70% / 70% 70% 40% 40%;
-      
-    //   }
+    cursor: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 
@@ -541,6 +579,16 @@ body {
         border-radius: 50% 70% 50% 70% / 70% 70% 50% 50%;
     }
     100%{
+        border-radius: 70% 50% 70% 50% / 50% 50% 70% 70%;
+    }
+}
+@keyframes deformRotate {
+    0%{
+        transform: rotate(0deg);
+        border-radius: 50% 70% 50% 70% / 70% 70% 50% 50%;
+    }
+    100%{
+        transform: rotate(360deg);
         border-radius: 70% 50% 70% 50% / 50% 50% 70% 70%;
     }
 }
