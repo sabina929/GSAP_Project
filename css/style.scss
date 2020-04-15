@@ -146,6 +146,216 @@ body {
         //   z-index: -1;
         }
 
+        section#lorem{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleY(0);
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: hsl(226, 36%, 42%);
+            z-index: 1;
+            opacity: 0;
+            border-radius: 50%;
+            
+
+            img{
+                filter: saturate(0);
+                width: 600px;
+                height: 560px;
+                object-fit: cover;
+                z-index: 1;
+                margin-top: -60px;
+            }
+            p{
+                width: 640px;
+                font-size: 2rem;
+                line-height: 48px;
+                letter-spacing: 1.1px;
+                color: hsl(226, 36%, 42%);
+                margin-left: -380px;
+                margin-top: 240px;
+                mix-blend-mode: color-burn;
+                z-index: 2;
+            }
+
+            .back{
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                font-style: italic;
+                font-size: 1.2rem;
+                letter-spacing: 1.1px;
+                color: hsl(226, 36%, 88%);
+                cursor: pointer;
+
+                // position: relative;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 105%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    opacity: 0;
+                    background-color: hsl(226, 36%, 88%);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: all .4s ease;
+                }
+
+                &:hover::before{
+                    transform: scaleX(1);
+                    opacity: 1;
+                }
+            }
+        }
+        section#ipsum{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleY(0);
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: hsl(81, 30%, 44%);
+            z-index: 1;
+            opacity: 0;
+            border-radius: 50%;
+            
+
+            img{
+                filter: saturate(0);
+                width: 600px;
+                height: 560px;
+                object-fit: cover;
+                z-index: 1;
+                margin-top: -60px;
+            }
+            p{
+                width: 640px;
+                font-size: 2rem;
+                line-height: 48px;
+                letter-spacing: 1.1px;
+                color: hsl(81, 30%, 42%);
+                margin-left: -380px;
+                margin-top: 240px;
+                mix-blend-mode: color-burn;
+                z-index: 2;
+            }
+
+            .back{
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                font-style: italic;
+                font-size: 1.2rem;
+                letter-spacing: 1.1px;
+                color: hsl(81, 30%, 88%);
+                cursor: pointer;
+
+                // position: relative;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 105%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    opacity: 0;
+                    background-color: hsl(81, 30%, 88%);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: all .4s ease;
+                }
+
+                &:hover::before{
+                    transform: scaleX(1);
+                    opacity: 1;
+                }
+            }
+        }
+        section#dolor{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleY(0);
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: hsl(268, 30%, 30%);
+            z-index: 1;
+            opacity: 0;
+            border-radius: 50%;
+            
+
+            img{
+                filter: saturate(0);
+                width: 600px;
+                height: 560px;
+                object-fit: cover;
+                z-index: 1;
+                margin-top: -60px;
+            }
+            p{
+                width: 640px;
+                font-size: 2rem;
+                line-height: 48px;
+                letter-spacing: 1.1px;
+                color: hsl(268, 30%, 68%);
+                margin-left: -380px;
+                margin-top: 240px;
+                mix-blend-mode: color-burn;
+                z-index: 2;
+            }
+
+            .back{
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                font-style: italic;
+                font-size: 1.2rem;
+                letter-spacing: 1.1px;
+                color: hsl(268, 30%, 88%);
+                cursor: pointer;
+
+                // position: relative;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 105%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    opacity: 0;
+                    background-color: hsl(268, 30%, 88%);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: all .4s ease;
+                }
+
+                &:hover::before{
+                    transform: scaleX(1);
+                    opacity: 1;
+                }
+            }
+        }
         section#sit{
             width: 100%;
             height: 100vh;
@@ -205,6 +415,76 @@ body {
                     height: 2px;
                     opacity: 0;
                     background-color: hsl(15, 50%, 88%);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: all .4s ease;
+                }
+
+                &:hover::before{
+                    transform: scaleX(1);
+                    opacity: 1;
+                }
+            }
+        }
+        section#amet{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleY(0);
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: hsl(34, 50%, 68%);
+            z-index: 1;
+            opacity: 0;
+            border-radius: 50%;
+            
+
+            img{
+                filter: saturate(0);
+                width: 600px;
+                height: 560px;
+                object-fit: cover;
+                z-index: 1;
+                margin-top: -60px;
+            }
+            p{
+                width: 640px;
+                font-size: 2rem;
+                line-height: 48px;
+                letter-spacing: 1.1px;
+                color: hsl(34, 50%, 38%);
+                margin-left: -380px;
+                margin-top: 240px;
+                mix-blend-mode: color-burn;
+                z-index: 2;
+            }
+
+            .back{
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                font-style: italic;
+                font-size: 1.2rem;
+                letter-spacing: 1.1px;
+                color: hsl(34, 50%, 88%);
+                cursor: pointer;
+
+                // position: relative;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 105%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    opacity: 0;
+                    background-color: hsl(34, 50%, 88%);
                     transform: scaleX(0);
                     transform-origin: left;
                     transition: all .4s ease;
