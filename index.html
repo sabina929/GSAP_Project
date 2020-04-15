@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <title>GSAP Test</title>
+</head>
+<body>
+  
+    <main>
+        <section id="nav">
+          <p class="to-left">
+            <span>Lorem</span>
+            <span>Ipsum</span>
+            <span>Dolor</span>
+            <span>Sit</span>
+            <span>Amet</span>
+          </p>
+           <p class="to-right">
+               <span>Amet</span>
+               <span>Sit</span>
+               <span>Dolor</span>
+               <span>Ipsum</span>
+            <span>Lorem</span>
+          </p>
+        </section>  
+        
+
+        <section id="sit">
+            <img src="https://images.unsplash.com/photo-1554052055-1013f2570185?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="image">
+            <p data-splitting>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates aperiam, voluptate minima officiis maiores atque impedit qui tempora incidunt odio earum optio sunt. Reiciendis, aperiam veniam, expedita labore alias ut ab eum cupiditate repellendus, atque nulla. Odit nisi amet nam deserunt doloremque fugiat, cum similique, eos saepe ratione praesentium consequuntur.</p>
+            <div class="back">Back To Home</div>
+        </section>
+      </main>
+
+
+        <!-- <nav>
+            <button id="prev">prev</button>
+            <button id="next">next</button>
+        </nav> -->
+    
+        <div id="tracker"></div>
+
+        <p class="logo">Logo</p>
+
+        <script>
+            const tracker = document.querySelector('#tracker');
+document.addEventListener('mousemove', e => {
+  tracker.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+        </script>
+    <script src="./script.js"></script>
+</body>
+</html>
